@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>教师界面</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body align="center" class="back1">
+<h1>欢迎老师进入</h1>
+
+<div align="center">
+    <fieldset class="field">
+        <legend><h3>教师可使用的功能：&nbsp&nbsp</h3></legend>
+        <ul type="none">
+            <li class="li">1、查看学生名单</li>
+            <li class="li">2、添加学生<br></li>
+            <li class="li">3、检查作业<br></li>
+            <li class="li">4、布置新作业<br></li>
+        </ul>
+    </fieldset>
+</div>
+
+<div>
+    <a href="/showstu0" target="_blank">
+        <button type="button" class="button">学生名单</button>
+    </a>
+
+    <br/>
+
+    <a href="/showhomework0" target="_blank">
+        <button type="button" class="button">作业名单</button>
+    </a>
+
+    <br/>
+
+    <a href="/showstudenthomework0" target="_blank">
+        <button type="button" class="button">检查作业</button>
+    </a>
+</div>
+
+</body>
+</html>

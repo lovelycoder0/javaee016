@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生作业管理系统</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body align="center" class="back1">
+
+        <form name="form" accept-charset="utf-8" action="/dologin">
+
+            <div style="margin-top: 100px">
+                <h1 align="center">欢迎使用学生作业管理系统</h1>
+            </div>
+
+            <div style="margin: 20px">
+                <label class="label">用&nbsp户&nbsp名：</label>
+                <input type="text" id="username" name="username" maxlength="16" />
+            </div>
+
+            <div style="margin: 20px">
+                <label class="label" >密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码：</label>
+                <input type="password" id="password"  name="password" maxlength="16"/>
+            </div>
+
+            <div style="margin: 20px">
+                <label class="label">权&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp限：</label>
+                <input type="authority" id="authority"  name="authority" maxlength="16"/>
+            </div>
+
+            <div style="margin: 20px" >
+                <input type="submit" value="登&nbsp&nbsp&nbsp&nbsp录" class="button"/>
+                <a href="/register">
+                    <button type="button" class="button">注&nbsp&nbsp&nbsp&nbsp册</button>
+                </a>
+            </div>
+        </form>
+
+</body>
+</html>

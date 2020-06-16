@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>教师管理作业</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body align="center" class="back1">
+<table border="0" class="table1" align="center" cellspacing="15px">
+    <h3 align="center">已布置的作业</h3>
+    <tr class="tr">
+        <th class="th">作业编号</th>
+        <th class="th">作业题目</th>
+        <th width="80px" class="th"></th>
+    </tr>
+    <tr th:each="user : ${homework}" class="tr">
+        <td th:text="${user.homeworkid}" class="td"></td>
+        <td th:text="${user.homeworktitle}" class="td"></td>
+        <td class="td">
+            <a  th:href="@{'/updatehomework/'+${user.homeworkid}}" >更改</a>
+            <a th:href="@{'/deletehomework/'+${user.homeworkid}}">删除</a>
+        </td>
+    </tr>
+</table>
+<a href="/addhomework">
+    <button type="button" class="button">布置作业</button>
+</a>
+</body>
+</html>

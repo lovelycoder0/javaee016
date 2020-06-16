@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>教师检查作业</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body align="center" class="back1">
+<table border="1" class="table1" align="center">
+    <h3 align="center">已提交的作业</h3>
+    <tr class="tr">
+        <th class="th">学生学号</th>
+        <th class="th">作业编号</th>
+        <th class="th">作业题目</th>
+        <th class="th">作业内容</th>
+    </tr>
+    <tr th:each="user : ${studenthomework}" class="tr">
+        <td th:text="${user.stuid}" class="td"></td>
+        <td th:text="${user.homeworkid}" class="td"></td>
+        <td th:text="${user.homeworktitle}" class="td"></td>
+        <td th:text="${user.homeworkContent}" class="td"></td>
+    </tr>
+</table>
+</body>
+</html>

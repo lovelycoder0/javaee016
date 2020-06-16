@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>学生更新作业</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body class="back1"align="center">
+
+<div style="margin-top: 100px">
+    <h1 align="center">更新作业进行中...</h1>
+</div>
+
+<div align="center" style="margin-top: 20px">
+    <form action="/update" method="post">
+
+        <div style="margin-top: 20px">
+            <label class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspI&nbsp&nbsp&nbsp&nbspD：</label>
+            <input  name="id" type="text" th:value="${studenthomework.id}" readonly="readonly" style="height: 25px"><br>
+        </div>
+
+        <div style="margin-top: 20px">
+            <label class="label">学生学号：</label>
+            <input  type="text" th:value="${studenthomework.stuid}" name="stuid" style="height: 25px"><br>
+        </div>
+
+        <div style="margin-top: 20px">
+            <label class="label">作业编号：</label>
+            <input  type="text" th:value="${studenthomework.homeworkid}" name="homeworkid" style="height: 25px"><br>
+        </div>
+
+        <div style="margin-top: 20px">
+            <label class="label">作业题目：</label>
+            <input  type="text" th:value="${studenthomework.homeworktitle}" name="homeworktitle" style="height: 25px"><br>
+        </div>
+
+        <div style="margin-top: 20px">
+            <label class="label">作业内容：</label>
+            <input type="text" th:value="${studenthomework.homeworkContent}" name="homeworkContent" style="height: 25px"><br>
+        </div>
+        <button  type="submit" class="button">提交</button>
+    </form>
+</div>
+
+</body>
+</html>

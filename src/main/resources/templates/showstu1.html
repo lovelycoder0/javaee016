@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>学生查看学生名单</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body class="back1">
+<table border="0" class="table1" align="center" cellspacing="15px">
+    <h3 align="center">学生名单</h3>
+    <tr class="tr">
+        <th class="th">学生学号</th>
+        <th class="th">学生姓名</th>
+    </tr>
+    <tr th:each="user : ${students}" class="tr">
+        <td th:text="${user.stuid}" class="td"></td>
+        <td th:text="${user.stuname}" class="td"></td>
+    </tr>
+</table>
+</body>
+</html>

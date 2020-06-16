@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>教师更新作业</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body align="center" class="back1">
+
+<div style="margin-top: 100px">
+    <h1 align="center">更新作业信息进行中...</h1>
+</div>
+
+<div  align="center" style="margin-top: 20px">
+    <form action="/updatehome" method="post">
+
+        <div style="margin-top: 20px">
+            <label class="label">学生学号：</label>
+            <input  name="homeworkid" type="text" th:value="${homework.homeworkid}" style="height: 25px" ><br>
+        </div>
+
+        <div style="margin-top: 20px">
+            <label class="label">学生姓名：</label>
+            <input  type="text" th:value="${homework.homeworktitle}" name="homeworktitle" style="height: 25px"><br>
+        </div>
+        <button class="button" type="submit">提交</button>
+    </form>
+</div>
+
+</body>
+</html>

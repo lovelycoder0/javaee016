@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>学生界面</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body class="back1" align="center">
+
+<div style="margin-top: 50px"></div>
+<h1 >欢迎同学进入</h1>
+
+<div align="center">
+    <fieldset class="field">
+        <legend><h3>学生可使用的功能：&nbsp&nbsp</h3></legend>
+        <ul type="none">
+            <li class="li">1、提交作业</li>
+            <li class="li">2、查看学生名单<br></li>
+            <li class="li">3、查看已布置的作业<br></li>
+            <li class="li">4、更新作业/删除作业<br></li>
+        </ul>
+    </fieldset>
+</div>
+
+<div>
+    <a href="/showstu1" target="_blank">
+        <button type="button" class="button">学生名单</button>
+    </a>
+
+    <br />
+    <a href="/showhomework1" target="_blank">
+        <button type="button" class="button">提交作业</button>
+    </a>
+</div>
+
+</body>
+</html>

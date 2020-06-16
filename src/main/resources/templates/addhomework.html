@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>教师布置作业</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body align="center" class="back1">
+<form name="form" accept-charset="utf-8"  action="/doaddhomework">
+
+    <div style="margin-top: 100px">
+        <h1 align="center">布置作业进行中...</h1>
+    </div>
+
+    <div style="margin: 20px">
+        <label  class="label">作业编号：</label>
+        <input type="text" id="homeworkid" name="homeworkid" maxlength="16" />
+    </div>
+
+    <div style="margin: 20px">
+        <label class="label">作业题目：</label>
+        <input type="text" id="homeworktitle"  name="homeworktitle" maxlength="20"/>
+    </div>
+
+    <div style="margin-top: 20px">
+        <input type="submit" value="确定" class="button"/>
+    </div>
+
+</form>
+</body>
+</html>

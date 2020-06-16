@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>学生管理作业</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body class="back1">
+
+<div class="left">
+    <h3 align="center">已布置的作业</h3>
+    <table border="0" class="table1"  cellspacing="15px">
+        <tr class="tr">
+            <th class="th">作业编号</th>
+            <th class="th">作业题目</th>
+        </tr>
+        <tr th:each="user : ${homework}" class="tr">
+            <td th:text="${user.homeworkid}" class="td"></td>
+            <td th:text="${user.homeworktitle}" class="td"></td>
+        </tr>
+    </table>
+</div>
+
+<div class="right">
+    <h3 align="center">提交作业</h3>
+    <table border="0" class="table1"  cellspacing="15px">
+        <tr class="tr">
+            <th class="th">学生学号</th>
+            <th  class="th" style="width: 100px">作业编号</th>
+            <th class="th">作业题目</th>
+            <th class="th">作业内容</th>
+            <th width="80px" class="th"></th>
+        </tr>
+        <tr th:each="user : ${studenthomework}" class="tr">
+            <td th:text="${user.stuid}" class="td"></td>
+            <td th:text="${user.homeworkid}" class="td"></td>
+            <td th:text="${user.homeworktitle}" class="td"></td>
+            <td th:text="${user.homeworkContent}" class="td"></td>
+            <td class="td">
+                <a  th:href="@{'/updatepage/'+${user.id}}" >更改</a>
+                <a th:href="@{'/delete/'+${user.id}}">删除</a>
+            </td>
+        </tr>
+    </table>
+    <a href="/addstudenthomework">
+        <button type="button" class="button">提交作业</button>
+    </a>
+</div>
+
+
+</body>
+</html>
